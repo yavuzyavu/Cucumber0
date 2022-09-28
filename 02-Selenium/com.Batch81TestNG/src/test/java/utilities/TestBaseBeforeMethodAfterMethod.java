@@ -1,22 +1,22 @@
 package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Ignore;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public abstract class TestBaseBeforeAfter {
+public abstract class TestBaseBeforeMethodAfterMethod {
     protected WebDriver driver;
     protected String tarih;
-
-    @Before
+    // TestNG framework'unde @Before ve @After notasyonları yerine @BeforeMethod ve @AfterMethod kullanılır
+    //Çalışma prensibi JUnit deki Before,After ile aynıdır
+    @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -27,8 +27,8 @@ public abstract class TestBaseBeforeAfter {
         DateTimeFormatter formater = DateTimeFormatter.ofPattern("YYMMddHHmmss");
         tarih = date.format(formater);
     }
-    @After
+    @AfterMethod
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 }
