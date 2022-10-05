@@ -22,5 +22,6 @@ public class C01_PageClassFaceBookTest {
         facebookPage.login.click();
         //Basarili giris yapilamadigini test edin
         Assert.assertTrue(facebookPage.girisYapilmadi.isDisplayed());
+        Driver.closeDriver();
     }
 }
