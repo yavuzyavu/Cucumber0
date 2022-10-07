@@ -11,8 +11,8 @@ import utilities.Driver;
 
 public class AmazonStepDefinition {
     AmazonPage amazonPage=new AmazonPage();
-    @Given("kullanici amazon anasayfasinda")
-    public void kullaniciAmazonAnasayfasinda() {
+    @Given("kullanici amazon sayfasina gider")
+    public void kullaniciAmazonSayfasinaGider() {
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
     }
 
@@ -25,12 +25,36 @@ public class AmazonStepDefinition {
     public void sonuclarinNutellaIcerdiginiTestEder() {
         String arananKelime="Nutella";
         String actualAramaSonucStr= amazonPage.aramaSonucElementi.getText();
-
         Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
     }
 
     @And("sayfayi kapatir")
     public void sayfayiKapatir() {
         Driver.closeDriver();
+    }
+
+
+    @Then("kullanici Selenium icin arama yapar")
+    public void kullaniciSeleniumIcinAramaYapar() {
+        amazonPage.aramaKutusu.sendKeys("Selenium" + Keys.ENTER);
+    }
+
+    @And("sonuclarin Selenium icerdigini test eder")
+    public void sonuclarinSeleniumIcerdiginiTestEder() {
+        String arananKelime="Selenium";
+        String actualAramaSonucStr= amazonPage.aramaSonucElementi.getText();
+        Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
+    }
+
+    @Then("kullanici iphone icin arama yapar")
+    public void kullaniciIphoneIcinAramaYapar() {
+        amazonPage.aramaKutusu.sendKeys("iphone" + Keys.ENTER);
+    }
+
+    @And("sonuclarin iphone icerdigini test eder")
+    public void sonuclarinIphoneIcerdiginiTestEder() {
+        String arananKelime="iphone";
+        String actualAramaSonucStr= amazonPage.aramaSonucElementi.getText();
+        Assert.assertTrue(actualAramaSonucStr.contains(arananKelime));
     }
 }
