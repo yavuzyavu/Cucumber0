@@ -1,4 +1,5 @@
 stepDefinitions\AmazonStepDefinition.class
+pages\GuruPage.class
 pages\BrcPage.class
 stepDefinitions\HepsiBuradaStepDefinition.class
 stepDefinitions\DataTableStepDefinition.class
@@ -7,6 +8,7 @@ pages\AmazonPage.class
 runners\Runner.class
 utilities\Driver.class
 stepDefinitions\BlueRentACarStepDefinition.class
+stepDefinitions\GuruStepdefs.class
 utilities\ConfigReader.class
 pages\DataBasePage.class
 stepDefinitions\HerokuStepDefinitions.class

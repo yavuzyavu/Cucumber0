@@ -1,6 +1,5 @@
 Feature: US1009 Datatables sitesine 5 farkli giris yapalim
 
-  @datatable
   Scenario Outline: TC14 kullanici 5 farkli kayit girisi yapabilmeli
 
     When kullanici "dataUrl" anasayfasinda
