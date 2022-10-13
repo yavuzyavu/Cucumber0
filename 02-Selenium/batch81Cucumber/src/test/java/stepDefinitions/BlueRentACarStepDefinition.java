@@ -46,4 +46,19 @@ public class BlueRentACarStepDefinition {
 
     }
 
+    @And("{string} username girer")
+    public void usernameGirer(String user) {
+
+        brc.email.sendKeys(user);
+    }
+
+    @And("{string} password girer")
+    public void passwordGirer(String pass) {
+        actions.sendKeys(Keys.TAB).sendKeys(pass).perform();
+    }
+
+    @And("brc Login butonuna basar")
+    public void brcLoginButonunaBasar() {
+        actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).perform();
+    }
 }
