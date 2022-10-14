@@ -6,9 +6,13 @@ stepDefinitions\DataTableStepDefinition.class
 pages\HerokuappPage.class
 pages\AmazonPage.class
 runners\Runner.class
+runners\TestRunner.class
 utilities\Driver.class
 stepDefinitions\BlueRentACarStepDefinition.class
-stepDefinitions\GuruStepdefs.class
+stepDefinitions\Hooks.class
+stepDefinitions\WebDriverStepDefinition.class
+runners\TestRunner2.class
 utilities\ConfigReader.class
 pages\DataBasePage.class
+stepDefinitions\GuruStepDefinition.class
 stepDefinitions\HerokuStepDefinitions.class
