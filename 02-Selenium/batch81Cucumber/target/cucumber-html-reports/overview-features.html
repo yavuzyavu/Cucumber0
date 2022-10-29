@@ -50,8 +50,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                8,
-                0,
+                2,
+                2,
                 0,
                 0,
                 0
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 8) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 4) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                2,
-                0
+                0,
+                2
             ],
             backgroundColor: [
                 "#00B000",
@@ -153,8 +153,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   2,
-                   0
+                   0,
+                   2
                ],
                backgroundColor: [
                 "#00B000",
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>cucumber-jvm-example</td>
         <td>1</td>
-      <td>14 Oct 2022, 22:06</td>
+      <td>28 Oct 2022, 14:26</td>
     </tr>
   </tbody>
 </table>
@@ -325,71 +325,71 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_3541622791.html">Amazon Search</a></td>
+        <td class="tagname"><a href="report-feature_1670261310.html">Test run failed</a></td>
 
-        <td      class="passed"    >4</td>
+        <td      class="passed"    >1</td>
+        <td      class="failed"    >1</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td class="total">4</td>
+        <td class="total">2</td>
 
-        <td  class="passed"    >1</td>
         <td >0</td>
+        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="42298323200">42.298</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="0">0.000</td>
+        <td class="failed">Failed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-feature_1_2473028300.html">Parametre Kullanimi</a></td>
+        <td class="tagname"><a href="report-feature_1_1670261310.html">Test run failed</a></td>
 
-        <td      class="passed"    >4</td>
+        <td      class="passed"    >1</td>
+        <td      class="failed"    >1</td>
         <td >0</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td class="total">4</td>
+        <td class="total">2</td>
 
-        <td  class="passed"    >1</td>
         <td >0</td>
+        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="13344876400">13.344</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="0">0.000</td>
+        <td class="failed">Failed</td>
       </tr>
   </tbody>
 
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>8</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8</td>
-
+      <td>2</td>
       <td>2</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4</td>
+
+      <td>0</td>
+      <td>2</td>
       <td>2</td>
 
-      <td class="duration">55.643</td>
+      <td class="duration">0.000</td>
       <td>2</td>
     </tr>
     <tr>
       <td></td>
-      <td>100.00%</td>
-      <td>0.00%</td>
+      <td>50.00%</td>
+      <td>50.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>100.00%</td>
       <td>0.00%</td>
-      <td></td>
-      <td></td>
       <td>100.00%</td>
+      <td></td>
+      <td></td>
+      <td>0.00%</td>
     </tr>
   </tfoot>
 </table>

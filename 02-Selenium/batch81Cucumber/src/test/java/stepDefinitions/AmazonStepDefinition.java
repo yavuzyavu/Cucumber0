@@ -12,11 +12,11 @@ import utilities.Driver;
 
 public class AmazonStepDefinition {
     AmazonPage amazonPage=new AmazonPage();
-    @Given("kullanici amazon sayfasina gider")
-    public void kullaniciAmazonSayfasinaGider() {
+
+    @Given("kullanici amazon anasayfasina gider")
+    public void kullaniciAmazonAnasayfasinaGider() {
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
     }
-
     @Then("kullanici Nutella icin arama yapar")
     public void kullaniciNutellaIcinAramaYapar() {
         amazonPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
@@ -108,11 +108,7 @@ public class AmazonStepDefinition {
     }
 
 
-    @Given("kullanici {string} sayfasina gider")
-    public void kullaniciSayfasinaGider(String istenenUrl) {
-        Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
 
-    }
 
     @When("url'nin {string} icerdigini test edelim")
     public void urlNinIcerdiginiTestEdelim(String arananKelime) {
@@ -130,4 +126,6 @@ public class AmazonStepDefinition {
             throw new RuntimeException(e);
         }
     }
+
+
 }
